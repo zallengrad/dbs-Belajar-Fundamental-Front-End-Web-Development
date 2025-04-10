@@ -17,9 +17,7 @@
   <body>
     <div class="container">
       <div class="nav-1">
-        <div class="logo">
-          <img src="./assets/logo.png" alt="" width="230px" />
-        </div>
+        <app-bar src-img="./assets/logo.png" alt-img="logo zale"></app-bar>
       </div>
 
       <!-- left side -->
@@ -29,22 +27,7 @@
           <span> Notes </span>
 
           <!-- form -->
-          <form id="notesForm">
-            <div class="form-group">
-              <label for="name">Judul</label>
-              <input type="text" id="judul" name="name" placeholder="masukan judul disini..." required minlength="1" aria-describedby="nameValidation" />
-              <p id="nameValidation" class="validation-message">Minimal 1 karakter.</p>
-            </div>
-
-            <div class="form-group">
-              <label for="name">Tulis Catatan</label>
-              <textarea id="catatan" name="komentar" rows="18" cols="30" placeholder="masukan catatan disini..."></textarea>
-            </div>
-
-            <div class="form-group">
-              <button class="btn">Tambah Catatan</button>
-            </div>
-          </form>
+          <form-item submit-text="Simpan Catatan" rows="12" cols="40"></form-item>
 
           <!-- end form -->
         </div>
@@ -61,44 +44,22 @@
         </div> -->
 
         <!-- notes -->
-        <div class="title-side">
+        <title-icon icon="fa-note-sticky" text="My Notes"></title-icon>
+        <!-- <div class="title-side">
           <i class="fa-solid fa-note-sticky"></i>
           <div class="mynotes">My Notes</div>
-        </div>
-        <!-- <div class="container-content">
-          <div class="content-mynotes">
-            <span>Judul : Kamis</span>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laudantium quo debitis! Numquam laudantium nesciunt, suscipit iusto laborum molestias placeat. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Repellat aperiam iusto quia non officiis eius excepturi! Corrupti aliquid cumque ratione dolorem reprehenderit aspernatur fugiat, magni nobis iure ad est harum velit laboriosam ducimus, consequuntur sapiente nulla minima totam
-              ullam deserunt! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore illo quidem temporibus dolores libero modi rerum dicta, eaque sit minus amet? Unde animi doloremque dicta tenetur rerum? Laboriosam, porro. Quas,
-              tempore. Nihil tempora sequi quis delectus distinctio architecto ipsa iure maiores dolorem deleniti, quasi corporis earum quae quaerat! Accusamus enim sapiente accusantium corporis est, doloremque exercitationem ipsum
-              praesentium natus ipsam repudiandae eos maiores, nulla hic necessitatibus. Non dolor facilis nobis dignissimos? Architecto nisi, beatae corporis quia molestias eaque provident dolor, consequatur necessitatibus non sint, et
-              doloribus libero reiciendis voluptate commodi quas magni tenetur. Harum iste beatae saepe ducimus excepturi pariatur?
-            </p>
-            <div class="footer-notes">
-              <span class="tanggal-note">tanggal : 3 april 2025</span>
-              <button class="btn-arsip">arsipkan catatan</button>
-            </div>
-          </div>
         </div> -->
+
+        <div class="container-content"></div>
 
         <!-- arsip -->
         <div class="title-side">
           <i class="fa-solid fa-box-archive"></i>
           <div class="mynotes">Arsip</div>
         </div>
-
-        <!-- <div class="container-archieve">
-          <div class="content-mynotes">
-            <span>Judul : Kamis</span>
-            <div class="footer-notes">
-              <span class="tanggal-note">tanggal : 3 april 2025</span>
-            </div>
-          </div>
-        </div> -->
+        <div class="container-archieve"></div>
       </div>
     </div>
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
