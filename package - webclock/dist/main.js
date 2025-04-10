@@ -1,0 +1,1 @@
+(()=>{const t=()=>{moment.locale("id"),$(".time").text(moment().format("LTS")),$(".date").text(moment().format("LL")),setTimeout(t,1e3)};t()})();
