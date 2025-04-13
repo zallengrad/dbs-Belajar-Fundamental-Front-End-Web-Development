@@ -1,3 +1,5 @@
+// XML HTTP REQUEST
+
 function main() {
   const baseUrl = 'https://books-api.dicoding.dev';
 
@@ -107,11 +109,8 @@ function main() {
      
         // Mengirimkan request
         xhr.send();
-  
-  
-  
+        
   };
-
 
 
   
