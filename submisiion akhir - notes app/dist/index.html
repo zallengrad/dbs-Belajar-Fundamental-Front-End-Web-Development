@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Zale Notes</title>
     <link
       rel="stylesheet"
@@ -14,53 +14,27 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="responsive.css" />
+    <script defer="defer" src="bundle.js"></script>
   </head>
   <body>
-    <loading-indicator id="loading"></loading-indicator>
-
     <div class="container">
       <div class="nav-1">
         <app-bar src-img="./assets/logo.png" alt-img="logo zale"></app-bar>
       </div>
-
-      <!-- left side -->
       <div class="notesbar">
         <div class="container-notes">
-          <i class="fa-solid fa-pencil"></i>
-          <span> Notes </span>
-
-          <!-- form -->
-          <form-item
+          <i class="fa-solid fa-pencil"></i> <span>Notes</span
+          ><form-item
             submit-text="Simpan Catatan"
             rows="12"
             cols="40"
           ></form-item>
-
-          <!-- end form -->
         </div>
       </div>
-
-      <!-- right side -->
-
       <div class="side">
-        <div class="loading" id="loading">
-          <div class="dot-load">
-            <div class="dot dot1"></div>
-            <div class="dot dot2"></div>
-            <div class="dot dot3"></div>
-          </div>
-        </div>
-
-        <!-- notes -->
         <title-icon icon="fa-note-sticky" text="My Notes"></title-icon>
-        <!-- <div class="title-side">
-          <i class="fa-solid fa-note-sticky"></i>
-          <div class="mynotes">My Notes</div>
-        </div> -->
-
         <div class="container-content"></div>
-
-        <!-- arsip -->
         <div class="title-side">
           <i class="fa-solid fa-box-archive"></i>
           <div class="mynotes">Arsip</div>

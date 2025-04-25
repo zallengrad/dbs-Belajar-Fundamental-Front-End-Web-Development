@@ -1,17 +1,15 @@
 class ArsipSection extends HTMLElement {
-    constructor(){
-        super()
+  constructor() {
+    super();
 
+    this.render();
+  }
 
-
-        this.render()
-    }
-
-    render() {
-        this.innerHTML = `
+  render() {
+    this.innerHTML = `
                 <div class="content-mynotes" style="color: gray">your archieve...</div>
-        `
-    }
+        `;
+  }
 }
 
-customElements.define('archieve-section', ArsipSection)
+customElements.define("archieve-section", ArsipSection);

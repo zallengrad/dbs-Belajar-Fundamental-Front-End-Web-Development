@@ -1,5 +1,6 @@
 import Utils from '../utils.js';
 import Clubs from '../data/local/clubs.js';
+import SportsApi from '../data/remote/sports-api.js';
 
 const home = () => {
   const searchFormElement = document.querySelector('search-bar');
@@ -12,6 +13,16 @@ const home = () => {
 
   const showSportClub = (query) => {
     showLoading();
+
+    SportsApi.searchClub(query)
+      .then((result) => {
+        displayResult(result);
+ 
+        showClubList();
+      })
+      .catch((error) => {
+        console.error(error);
+      });
 
     const result = Clubs.searchClub(query);
     displayResult(result);

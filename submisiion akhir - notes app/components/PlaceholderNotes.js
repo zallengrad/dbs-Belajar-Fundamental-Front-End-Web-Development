@@ -1,18 +1,17 @@
 class NotesSection extends HTMLElement {
-    constructor() {
-        super()
+  constructor() {
+    super();
 
+    this.render();
+  }
 
-        this.render()
-    }
-
-    render() {
-        this.innerHTML = `
+  render() {
+    this.innerHTML = `
         <div class="content-mynotes" style="color: gray">
         your notes...
         </div>
-        `
-    }
+        `;
+  }
 }
 
-customElements.define('notes-section', NotesSection);
+customElements.define("notes-section", NotesSection);

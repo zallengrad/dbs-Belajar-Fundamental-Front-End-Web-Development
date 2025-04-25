@@ -1,23 +1,23 @@
 class FormItem extends HTMLElement {
-    constructor() {
-        super();
-        this.render();
-    }
+  constructor() {
+    super();
+    this.render();
+  }
 
-    static get observedAttributes() {
-        return ['submit-text', 'rows', 'cols']; // Atribut yang dipantau
-    }
+  static get observedAttributes() {
+    return ["submit-text", "rows", "cols"];
+  }
 
-    attributeChangedCallback() {
-        this.render();
-    }
+  attributeChangedCallback() {
+    this.render();
+  }
 
-    render() {
-        const submitText = this.getAttribute('submit-text') || 'Tambah Catatan'; 
-        const rows = this.getAttribute('rows') || '15'; 
-        const cols = this.getAttribute('cols') || '30'; 
+  render() {
+    const submitText = this.getAttribute("submit-text") || "Tambah Catatan";
+    const rows = this.getAttribute("rows") || "15";
+    const cols = this.getAttribute("cols") || "30";
 
-        this.innerHTML = `
+    this.innerHTML = `
             <form id="notesForm">
                 <div class="form-group">
                     <label for="name">Judul</label>
@@ -37,7 +37,7 @@ class FormItem extends HTMLElement {
 
             <div id="notes-container"></div>
         `;
-    }
+  }
 }
 
-customElements.define('form-item', FormItem);
+customElements.define("form-item", FormItem);
